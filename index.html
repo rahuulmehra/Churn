@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churnio – Retention Hub | AI-Powered Customer Retention</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%234338ca%22/><text y=%2265%22 font-size=%2250%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22 x=%2250%22>C</text></svg>">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">C</div>
+        <div class="brand-info">
+          <h1>Churnio</h1>
+          <span>Retention Hub</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <button class="nav-btn active" data-view="home">
+          <span>Home</span>
+        </button>
+        <button class="nav-btn" data-view="single">
+          <span>Single Customer</span>
+        </button>
+        <button class="nav-btn" data-view="bulk">
+          <span>Bulk Analysis</span>
+        </button>
+        <button class="nav-btn" data-view="presentation">
+          <span>Team & Presentation</span>
+        </button>
+      </nav>
+
+      <div class="nav-status">
+        <div class="academic-badge">
+          KCC ITM &bull; B.Tech 5th Sem
+        </div>
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>Model live &nbsp;<strong>SVM</strong></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main App Body -->
+  <main class="container">
+
+    <!-- ============================================== -->
+    <!-- VIEW 1: HOME PAGE                             -->
+    <!-- ============================================== -->
+    <section id="view-home" class="view-section active">
+      <!-- Hero Card -->
+      <div class="hero-card">
+        <div class="hero-left">
+          <span class="hero-tag">AI-POWERED CUSTOMER RETENTION</span>
+          <h2 class="hero-title">Every lost customer is a lost sale. <span>Find them before they leave.</span></h2>
+          <p class="hero-subtitle">Predict which shoppers are about to stop buying, understand why, and win them back with the right coupon at the right time.</p>
+          
+          <div class="step-cards">
+            <div class="step-card">
+              <span class="step-num">1</span>
+              <div>
+                <strong>Open Single or Bulk</strong>
+                <p>Choose analysis mode from top menu</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <span class="step-num">2</span>
+              <div>
+                <strong>Enter or Upload</strong>
+                <p>One customer details or CSV dataset</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <span class="step-num">3</span>
+              <div>
+                <strong>Get Churn & Offers</strong>
+                <p>Risk level, reasons, coupons & insights</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Model Performance Widget (Page 4) -->
+        <div class="model-box">
+          <div class="model-box-header">Model performance</div>
+          <div class="gauge-wrapper">
+            <svg class="gauge-svg" viewBox="0 0 100 100">
+              <circle class="gauge-bg" cx="50" cy="50" r="37.5"></circle>
+              <circle class="gauge-val" cx="50" cy="50" r="37.5"></circle>
+            </svg>
+            <div class="gauge-text">
+              <div class="gauge-score">97.8%</div>
+              <div class="gauge-label">Test accuracy (SVM)</div>
+            </div>
+          </div>
+
+          <div class="model-metrics-list">
+            <div class="metric-row">
+              <span>Recall (churners caught)</span>
+              <span>94.0%</span>
+            </div>
+            <div class="metric-row">
+              <span>F1 score</span>
+              <span>0.94</span>
+            </div>
+            <div class="metric-row">
+              <span>ROC-AUC</span>
+              <span>0.99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stat Counters Row (Page 4) -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num" id="statTrained">5,073</div>
+          <div class="stat-label">Customers trained on</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="statSignals">18</div>
+          <div class="stat-label">Customer signals used</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="statModels">6</div>
+          <div class="stat-label">Models compared</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="statAccuracy">95.6%</div>
+          <div class="stat-label">Core model accuracy (8 columns)</div>
+        </div>
+      </div>
+
+      <!-- Project Context & Solution Breakdown -->
+      <div class="info-grid">
+        <!-- Problem Card -->
+        <div class="card">
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem;">The problem we solve</h3>
+          <div class="callout-box">
+            <strong>In one line:</strong> Churnio is a website that tells an online shopping company (like Amazon or Flipkart) which customers are about to stop buying, why, and what offer to give them so they stay.
+          </div>
+          <p style="font-size: 0.9rem; color: #475569; line-height: 1.6;">
+            On shopping apps, customers leave very easily: a late delivery, an unsolved complaint, or a better offer elsewhere is enough.
+            Companies usually notice only <strong>after</strong> the customer is gone, and they send the same coupon to everyone. That wastes money on happy customers and does too little for the ones about to leave.
+          </p>
+        </div>
+
+        <!-- 3 Step Solution -->
+        <div class="card">
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem;">Our solution in 3 steps</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="background: #f8fafc; border-left: 3px solid #4338ca; padding: 0.75rem 1rem; border-radius: 6px;">
+              <strong style="color: #4338ca; font-size: 0.9rem;">1. Predict</strong>
+              <p style="font-size: 0.85rem; color: #475569; margin-top: 2px;">A machine learning model (SVM) evaluates 18 customer behavioral signals and outputs an exact chance of leaving (e.g. 99.5%).</p>
+            </div>
+            <div style="background: #f8fafc; border-left: 3px solid #0284c7; padding: 0.75rem 1rem; border-radius: 6px;">
+              <strong style="color: #0284c7; font-size: 0.9rem;">2. Explain</strong>
+              <p style="font-size: 0.85rem; color: #475569; margin-top: 2px;">The system automatically pinpoints why: e.g. "new customer", "unresolved complaint", or "lower cashback compared to average".</p>
+            </div>
+            <div style="background: #f8fafc; border-left: 3px solid #16a34a; padding: 0.75rem 1rem; border-radius: 6px;">
+              <strong style="color: #16a34a; font-size: 0.9rem;">3. Act</strong>
+              <p style="font-size: 0.85rem; color: #475569; margin-top: 2px;">The probability translates into 1 of 5 targeted risk tiers with automated ready offers, from regular loyalty points up to a 20% comeback discount.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flowchart Section (Page 2) -->
+      <div class="card">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem;">How Churnio works (Data & Tech Architecture)</h3>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Each step shows what happens, the primary tool utilized, and the student team owner:</p>
+        
+        <div class="flow-steps">
+          <div class="flow-step-item">
+            <strong>Customer data</strong>
+            <span>5,630 past shoppers</span>
+            <span class="tool-pill">Excel &bull; Sadaf</span>
+          </div>
+          <div class="flow-step-item">
+            <strong>Clean</strong>
+            <span>Fix errors, deduplicate 557</span>
+            <span class="tool-pill">pandas &bull; Sadaf</span>
+          </div>
+          <div class="flow-step-item">
+            <strong>Understand</strong>
+            <span>Charts: who leaves?</span>
+            <span class="tool-pill">Matplotlib &bull; Shereya</span>
+          </div>
+          <div class="flow-step-item">
+            <strong>Learn</strong>
+            <span>Train 9 models, pick SVM</span>
+            <span class="tool-pill">scikit-learn &bull; Sadaf</span>
+          </div>
+          <div class="flow-step-item">
+            <strong>Predict</strong>
+            <span>Real-time churn risk</span>
+            <span class="tool-pill">Streamlit &bull; Rahul</span>
+          </div>
+          <div class="flow-step-item">
+            <strong>Act</strong>
+            <span>Risk level + offers</span>
+            <span class="tool-pill">pandas &bull; Shereya</span>
+          </div>
+          <div class="flow-step-item">
+            <strong>Show</strong>
+            <span>Interactive web app</span>
+            <span class="tool-pill">HTML/CSS &bull; Rohan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 2: SINGLE CUSTOMER PREDICTION             -->
+    <!-- ============================================== -->
+    <section id="view-single" class="view-section">
+      <div class="section-header">
+        <h2>Single Customer Prediction</h2>
+        <p>Enter one customer's details to check if they are likely to leave.</p>
+      </div>
+
+      <!-- Quick Demo Presets Bar -->
+      <div class="preset-bar">
+        <span>Presentation Quick Demos:</span>
+        <button id="btnPresetCritical" class="preset-btn">Load Critical Churn Customer (99.5% - Page 5 Demo)</button>
+        <button id="btnPresetLoyal" class="preset-btn">Load Loyal Safe Customer (0.8% - Very Low)</button>
+        <button id="btnPresetMedium" class="preset-btn">Load Medium Risk Customer (50.0%)</button>
+      </div>
+
+      <!-- Form Grid (3 Columns from Page 4) -->
+      <form id="singleCustomerForm">
+        <div class="form-grid-3">
+          <!-- Column 1: Orders -->
+          <div class="form-column-card">
+            <div class="form-column-title">Orders</div>
+            
+            <div class="field-group">
+              <label for="tenure">Tenure (months)</label>
+              <div class="stepper-input">
+                <button type="button" class="stepper-btn" data-action="minus">−</button>
+                <input type="number" id="tenure" value="0" min="0" max="60">
+                <button type="button" class="stepper-btn" data-action="plus">+</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="ordersLastMonth">Orders last month</label>
+              <div class="stepper-input">
+                <button type="button" class="stepper-btn" data-action="minus">−</button>
+                <input type="number" id="ordersLastMonth" value="2" min="0" max="50">
+                <button type="button" class="stepper-btn" data-action="plus">+</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="daysSinceLastOrder">Days since last order</label>
+              <div class="stepper-input">
+                <button type="button" class="stepper-btn" data-action="minus">−</button>
+                <input type="number" id="daysSinceLastOrder" value="2" min="0" max="365">
+                <button type="button" class="stepper-btn" data-action="plus">+</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="couponsUsed">Coupons used last month</label>
+              <div class="stepper-input">
+                <button type="button" class="stepper-btn" data-action="minus">−</button>
+                <input type="number" id="couponsUsed" value="2" min="0" max="20">
+                <button type="button" class="stepper-btn" data-action="plus">+</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="avgCashback">Average cashback (Rs)</label>
+              <input type="number" step="0.01" class="input-control" id="avgCashback" value="134.41">
+            </div>
+
+            <div class="field-group">
+              <label for="orderHikePercentage">Order amount hike from last year (%)</label>
+              <div class="stepper-input">
+                <button type="button" class="stepper-btn" data-action="minus">−</button>
+                <input type="number" id="orderHikePercentage" value="13" min="0" max="100">
+                <button type="button" class="stepper-btn" data-action="plus">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Experience -->
+          <div class="form-column-card">
+            <div class="form-column-title">Experience</div>
+
+            <div class="field-group">
+              <label for="satisfactionScore">Satisfaction score (1-5)</label>
+              <div class="slider-container">
+                <input type="range" id="satisfactionScore" min="1" max="5" value="3">
+                <span id="satisfactionBadge" class="slider-val-badge">3</span>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>Complaint last month?</label>
+              <div class="radio-pill-group">
+                <label class="radio-pill-label">
+                  <input type="radio" name="complain" value="0"> No
+                </label>
+                <label class="radio-pill-label">
+                  <input type="radio" name="complain" value="1" checked> Yes
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="hoursSpentApp">Hours spent on app</label>
+              <div class="stepper-input">
+                <button type="button" class="stepper-btn" data-action="minus">−</button>
+                <input type="number" id="hoursSpentApp" value="2" min="0" max="24">
+                <button type="button" class="stepper-btn" data-action="plus">+</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="devicesRegistered">Devices registered</label>
+              <div class="stepper-input">
+                <button type="button" class="stepper-btn" data-action="minus">−</button>
+                <input type="number" id="devicesRegistered" value="3" min="1" max="10">
+                <button type="button" class="stepper-btn" data-action="plus">+</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="savedAddresses">Saved addresses</label>
+              <div class="stepper-input">
+                <button type="button" class="stepper-btn" data-action="minus">−</button>
+                <input type="number" id="savedAddresses" value="2" min="1" max="15">
+                <button type="button" class="stepper-btn" data-action="plus">+</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="warehouseToHomeKm">Warehouse to home (km)</label>
+              <div class="stepper-input">
+                <button type="button" class="stepper-btn" data-action="minus">−</button>
+                <input type="number" id="warehouseToHomeKm" value="11" min="1" max="100">
+                <button type="button" class="stepper-btn" data-action="plus">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Profile -->
+          <div class="form-column-card">
+            <div class="form-column-title">Profile</div>
+
+            <div class="field-group">
+              <label for="cityTier">City tier</label>
+              <select id="cityTier" class="input-control">
+                <option value="1">Tier 1</option>
+                <option value="2">Tier 2</option>
+                <option value="3">Tier 3</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="preferredCategory">Preferred category</label>
+              <select id="preferredCategory" class="input-control">
+                <option value="Mobile Phone">Mobile Phone</option>
+                <option value="Laptop & Accessory">Laptop & Accessory</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Grocery">Grocery</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="paymentMode">Payment mode</label>
+              <select id="paymentMode" class="input-control">
+                <option value="Cash on Delivery">Cash on Delivery</option>
+                <option value="UPI">UPI</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+                <option value="E-Wallet">E-Wallet</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="loginDevice">Login device</label>
+              <select id="loginDevice" class="input-control">
+                <option value="Mobile Phone">Mobile Phone</option>
+                <option value="Computer">Computer</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="gender">Gender</label>
+              <select id="gender" class="input-control">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="maritalStatus">Marital status</label>
+              <select id="maritalStatus" class="input-control">
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button type="submit" class="btn-primary">Predict churn</button>
+          <button type="reset" class="btn-secondary">Reset form</button>
+        </div>
+      </form>
+
+      <!-- Single Prediction Result View (Matches Page 5 Screenshot) -->
+      <div id="singlePredictionResult" class="single-result-container" style="display: none;">
+        <h3 style="font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem;">Prediction Result</h3>
+
+        <div id="resBanner" class="result-banner churn">
+          <span id="resBannerText">This customer is likely to churn.</span>
+          <span id="resRiskBadge" class="risk-pill-badge critical">Critical risk</span>
+        </div>
+
+        <div class="result-metrics-3">
+          <div class="result-metric-card">
+            <div class="res-label">Churn probability</div>
+            <div id="resProbability" class="res-val" style="color: #dc2626;">99.5%</div>
+          </div>
+          <div class="result-metric-card">
+            <div class="res-label">Risk level</div>
+            <div id="resRiskLevel" class="res-val" style="color: #991b1b;">Critical</div>
+          </div>
+          <div class="result-metric-card">
+            <div class="res-label">Recommended offer</div>
+            <div id="resOffer" class="res-val" style="color: #4338ca;">20% off</div>
+          </div>
+        </div>
+
+        <div class="rec-action-banner">
+          <strong>Recommended action:</strong> <span id="resActionBanner">20% discount + priority retention campaign</span>
+        </div>
+
+        <div class="strategy-box">
+          <h4 id="resStrategyTitle">Retention strategy: Critical risk &bull; 81-100%</h4>
+          <ul id="resStrategyList" class="strategy-list">
+            <li>20% discount coupon applied immediately to cart.</li>
+            <li>Special cashback offers on high-margin categories.</li>
+            <li>Priority customer support route with direct hotline callback.</li>
+            <li>Exclusive comeback campaign via WhatsApp & SMS.</li>
+            <li>Personalized retention communication from customer success team.</li>
+          </ul>
+        </div>
+
+        <div class="reasons-box">
+          <h4>Possible reasons (ML Feature Attribution):</h4>
+          <div id="resReasonsList">
+            <!-- Dynamic reasons populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 3: BULK ANALYSIS                          -->
+    <!-- ============================================== -->
+    <section id="view-bulk" class="view-section">
+      <div class="section-header">
+        <h2>Bulk Customer Analysis</h2>
+        <p>Upload a customer batch CSV or analyze the presentation benchmark dataset.</p>
+      </div>
+
+      <!-- Upload Zone -->
+      <div id="bulkUploadZone" class="bulk-upload-card">
+        <div class="upload-icon">&#128196;</div>
+        <h4 style="font-size: 1.1rem; font-weight: 700; color: #1e293b; margin-bottom: 0.35rem;">Upload Customer CSV Dataset</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Drag & drop customer CSV file here, or click to browse</p>
+        <input type="file" id="csvFileInput" accept=".csv" style="display: none;">
+        <button type="button" id="btnLoadSampleCsv" class="btn-primary" style="margin: 0 auto;">
+          &#9889; Load Benchmark 200 Customers (Ready for Live Demo)
+        </button>
+      </div>
+
+      <!-- Step 3: Results Summary Grid (Page 5) -->
+      <div class="bulk-stats-grid">
+        <div class="bulk-stat-card">
+          <div class="b-label">Total customers</div>
+          <div id="bulkTotal" class="b-val">200</div>
+        </div>
+        <div class="bulk-stat-card">
+          <div class="b-label">Likely to churn</div>
+          <div id="bulkLikely" class="b-val" style="color: #dc2626;">36</div>
+          <div id="bulkLikelyRate" class="b-sub">&uarr; 18.0%</div>
+        </div>
+        <div class="bulk-stat-card">
+          <div class="b-label">Critical risk</div>
+          <div id="bulkCritical" class="b-val" style="color: #991b1b;">35</div>
+        </div>
+        <div class="bulk-stat-card">
+          <div class="b-label">High risk</div>
+          <div id="bulkHigh" class="b-val">0</div>
+        </div>
+        <div class="bulk-stat-card">
+          <div class="b-label">Cashback to at-risk</div>
+          <div id="bulkCashbackAtRisk" class="b-val" style="color: #4338ca;">Rs 6,029</div>
+        </div>
+      </div>
+
+      <!-- Bulk Sub Tabs -->
+      <div class="sub-tabs">
+        <button class="sub-tab-btn active" data-subview="sub-overview">Overview</button>
+        <button class="sub-tab-btn" data-subview="sub-segments">Segments</button>
+        <button class="sub-tab-btn" data-subview="sub-insights">Insights</button>
+        <button class="sub-tab-btn" data-subview="sub-customers">Customers</button>
+      </div>
+
+      <!-- SUB-PANE 1: OVERVIEW (Page 5 Charts) -->
+      <div id="sub-overview" class="sub-view-pane active">
+        <div class="charts-grid-3">
+          <div class="chart-card">
+            <div class="chart-title">Churn vs retained</div>
+            <div class="chart-container">
+              <canvas id="chartDonut"></canvas>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; font-size: 0.8rem; margin-top: 0.5rem;">
+              <span style="color: #10b981; font-weight: 600;">&bull; Will stay (82.0%)</span>
+              <span style="color: #ef4444; font-weight: 600;">&bull; Will churn (18.0%)</span>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-title">Customers by risk level</div>
+            <div class="chart-container">
+              <canvas id="chartBarRisk"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-title">Churn probability distribution</div>
+            <div class="chart-container">
+              <canvas id="chartDistribution"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-PANE 2: SEGMENTS -->
+      <div id="sub-segments" class="sub-view-pane">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <div class="card">
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: #1e293b; margin-bottom: 0.75rem;">Churn rate by Product Category</h4>
+            <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+              <canvas id="chartSegmentCat"></canvas>
+            </div>
+          </div>
+          <div class="card">
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: #1e293b; margin-bottom: 0.75rem;">Churn rate by Tenure & Complaint status</h4>
+            <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+              <canvas id="chartSegmentTenure"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 style="font-size: 1rem; font-weight: 700; color: #1e293b; margin-bottom: 0.75rem;">What we found in the data (Key Statistical Drivers)</h4>
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Who leaves the most</th>
+                <th>How much</th>
+                <th>What a company should do</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>New customers (first 3 months)</strong></td>
+                <td><span style="color:#dc2626; font-weight:700;">41% leave</span> (vs 5% after 1 year)</td>
+                <td>Welcome offers, smooth first delivery</td>
+              </tr>
+              <tr>
+                <td><strong>Customers who complained</strong></td>
+                <td><span style="color:#dc2626; font-weight:700;">31% leave</span> (vs 11%)</td>
+                <td>Solve complaints fast, follow up immediately</td>
+              </tr>
+              <tr>
+                <td><strong>Mobile Phone buyers</strong></td>
+                <td><span style="color:#dc2626; font-weight:700;">26% leave</span></td>
+                <td>Check prices and delivery warranty in that category</td>
+              </tr>
+              <tr>
+                <td><strong>Cash on Delivery users</strong></td>
+                <td><span style="color:#dc2626; font-weight:700;">25% leave</span></td>
+                <td>Extra cashback incentive for switching to online payment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SUB-PANE 3: INSIGHTS (Page 6 Matching) -->
+      <div id="sub-insights" class="sub-view-pane">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem;">Business insights</h3>
+        
+        <div class="insight-item-card">
+          <div class="insight-text">Customers who raised a complaint are 2.6x more likely to churn (32% vs 12%).</div>
+          <div class="insight-action"><strong>Action:</strong> Solve complaints faster and follow up with a call after every complaint.</div>
+        </div>
+
+        <div class="insight-item-card">
+          <div class="insight-text">New customers (0-3 months) have the highest risk: 42% churn vs 18% overall.</div>
+          <div class="insight-action"><strong>Action:</strong> Give a welcome offer on the 2nd and 3rd order and make the first delivery experience smooth.</div>
+        </div>
+
+        <div class="insight-item-card">
+          <div class="insight-text">Product category 'Mobile Phone' has the highest churn rate: 25% vs 18% overall.</div>
+          <div class="insight-action"><strong>Action:</strong> Check prices, delivery time and offers in the 'Mobile Phone' category.</div>
+        </div>
+
+        <div class="insight-item-card">
+          <div class="insight-text">City tier '3' has the highest churn rate: 24% vs 18% overall.</div>
+          <div class="insight-action"><strong>Action:</strong> Improve delivery speed and local offers in City Tier 3.</div>
+        </div>
+
+        <div class="insight-item-card">
+          <div class="insight-text">Marital status 'Single' has the highest churn rate: 36% vs 18% overall.</div>
+          <div class="insight-action"><strong>Action:</strong> Create targeted offers for 'Single' customers.</div>
+        </div>
+
+        <div class="insight-item-card">
+          <div class="insight-text">Customers likely to churn get less cashback on average (Rs 167 vs Rs 178).</div>
+          <div class="insight-action"><strong>Action:</strong> Increase cashback for at-risk customers on their next order.</div>
+        </div>
+
+        <div class="insight-item-card">
+          <div class="insight-text">18% of customers are Critical risk (35) and 0% are High risk (0).</div>
+          <div class="insight-action"><strong>Action:</strong> Start the priority retention campaign with Critical customers (20% discount + priority support), then High risk customers (15% discount + personalized offer).</div>
+        </div>
+
+        <!-- Plan by risk level table (Page 6) -->
+        <div class="card" style="margin-top: 1.5rem;">
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: #1e293b; margin-bottom: 0.75rem;">Plan by risk level</h4>
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Risk_Level</th>
+                <th>Customers</th>
+                <th>Avg_Probability</th>
+                <th>Churn_Range</th>
+                <th>Recommended_Action</th>
+              </tr>
+            </thead>
+            <tbody id="planByRiskBody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SUB-PANE 4: CUSTOMERS TABLE -->
+      <div id="sub-customers" class="sub-view-pane">
+        <div class="table-toolbar">
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <input type="text" id="tableSearchInput" class="search-input" placeholder="Search by ID or Category...">
+            <select id="tableFilterRisk" class="input-control" style="width: auto;">
+              <option value="ALL">All Risk Tiers</option>
+              <option value="Critical">Critical (81-100%)</option>
+              <option value="High">High (61-80%)</option>
+              <option value="Medium">Medium (41-60%)</option>
+              <option value="Low">Low (21-40%)</option>
+              <option value="Very Low">Very Low (0-20%)</option>
+            </select>
+          </div>
+          <button id="btnDownloadProcessed" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+            &#128190; Download Processed CSV
+          </button>
+        </div>
+
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Customer ID</th>
+              <th>Tenure</th>
+              <th>Complain</th>
+              <th>Category</th>
+              <th>Cashback</th>
+              <th>Probability</th>
+              <th>Risk Tier</th>
+              <th>Retention Offer</th>
+            </tr>
+          </thead>
+          <tbody id="customersTableBody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+          <span id="paginationInfo" style="font-size: 0.85rem; color: #64748b;">Showing 1 to 10 of 200</span>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="btnTablePrev" class="btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">Previous</button>
+            <button id="btnTableNext" class="btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 4: TEAM & PRESENTATION HELPER (Pages 7&8)  -->
+    <!-- ============================================== -->
+    <section id="view-presentation" class="view-section">
+      <!-- Header with College Info -->
+      <div class="card" style="background: linear-gradient(135deg, #4338ca 0%, #312e81 100%); color: white; border: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px;">KCC Institute of Technology and Management</span>
+            <h2 style="font-size: 1.6rem; font-weight: 800; margin-top: 4px;">Presentation Assistant & Project Guide</h2>
+            <p style="font-size: 0.9rem; opacity: 0.9;">B.Tech 3rd Year, 5th Semester &bull; Guide: Dr. Ojaswani &bull; HOD: Dr. Chetan Khemraj</p>
+          </div>
+
+          <!-- 12-Minute Presentation Timer -->
+          <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 0.75rem 1.25rem; text-align: center;">
+            <div style="font-size: 0.72rem; opacity: 0.8;">PRESENTATION STOPWATCH (12 MIN)</div>
+            <div id="presTimerDisplay" style="font-size: 1.8rem; font-weight: 800; font-family: monospace;">12:00</div>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+              <button id="btnTimerToggle" class="btn-primary" style="padding: 0.3rem 0.75rem; font-size: 0.75rem; background: #fff; color: #4338ca;">Start Timer</button>
+              <button id="btnTimerReset" class="btn-secondary" style="padding: 0.3rem 0.75rem; font-size: 0.75rem; background: transparent; color: #fff; border-color: rgba(255,255,255,0.4);">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Presentation Order (Page 8) -->
+      <div class="card">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem;">Presentation Order (About 12 minutes)</h3>
+        <div class="agenda-timeline">
+          <div class="agenda-row">
+            <span class="agenda-step">#1</span>
+            <span class="agenda-speaker" style="color: #3b82f6;">Sadaf (Leader)</span>
+            <span class="agenda-topic">The problem, our idea, the customer dataset</span>
+            <span class="agenda-time">2 min</span>
+          </div>
+          <div class="agenda-row">
+            <span class="agenda-step">#2</span>
+            <span class="agenda-speaker" style="color: #f59e0b;">Shereya Verma</span>
+            <span class="agenda-topic">Charts: Exploratory data analysis & who leaves and why</span>
+            <span class="agenda-time">2 min</span>
+          </div>
+          <div class="agenda-row">
+            <span class="agenda-step">#3</span>
+            <span class="agenda-speaker" style="color: #3b82f6;">Sadaf</span>
+            <span class="agenda-topic">The 9 ML models trained, why SVM won, evaluation metrics</span>
+            <span class="agenda-time">3 min</span>
+          </div>
+          <div class="agenda-row">
+            <span class="agenda-step">#4</span>
+            <span class="agenda-speaker" style="color: #10b981;">Rohan Singh Kholiya</span>
+            <span class="agenda-topic">App design system, UX structure, and Home page</span>
+            <span class="agenda-time">1.5 min</span>
+          </div>
+          <div class="agenda-row">
+            <span class="agenda-step">#5</span>
+            <span class="agenda-speaker" style="color: #6366f1;">Rahul Mehra</span>
+            <span class="agenda-topic">Live software demo: Single Customer & Bulk File Upload</span>
+            <span class="agenda-time">2 min</span>
+          </div>
+          <div class="agenda-row">
+            <span class="agenda-step">#6</span>
+            <span class="agenda-speaker" style="color: #f59e0b;">Shereya</span>
+            <span class="agenda-topic">Business insights engine and the 5-level coupon strategy</span>
+            <span class="agenda-time">1 min</span>
+          </div>
+          <div class="agenda-row">
+            <span class="agenda-step">#7</span>
+            <span class="agenda-speaker" style="color: #3b82f6;">Sadaf</span>
+            <span class="agenda-topic">Conclusion, business ROI impact, and future extensions</span>
+            <span class="agenda-time">0.5 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Cards (Page 7) -->
+      <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem;">Our team: Who does what</h3>
+      <div class="team-grid-2">
+        <!-- Sadaf -->
+        <div class="member-card sadaf">
+          <div class="member-header">
+            <div class="member-name">Sadaf</div>
+            <div class="member-role">Team Leader &bull; Machine Learning</div>
+            <div class="member-tag">Builds the "brain" of Churnio: the model that predicts who will leave.</div>
+          </div>
+          <strong style="font-size: 0.8rem; color: #334155;">WHAT SHE DOES:</strong>
+          <ul class="member-tasks-list">
+            <li>Cleans customer data (fixes spellings, removes 557 copies, fills missing values)</li>
+            <li>Trains 9 ML models and benchmarks them</li>
+            <li>Chooses SVM because it catches the most leaving customers (158 / 168 caught)</li>
+            <li>Builds a backup model for files with missing columns (95.6% accuracy)</li>
+            <li>Joins everyone's work and coordinates presentation delivery</li>
+          </ul>
+          <strong style="font-size: 0.8rem; color: #334155; margin-top: 0.5rem;">CORE TOOLS:</strong>
+          <div class="tools-row">
+            <span class="badge-tool">pandas</span>
+            <span class="badge-tool">NumPy</span>
+            <span class="badge-tool">scikit-learn</span>
+            <span class="badge-tool">SVM</span>
+            <span class="badge-tool">pickle</span>
+          </div>
+        </div>
+
+        <!-- Shereya Verma -->
+        <div class="member-card shereya">
+          <div class="member-header">
+            <div class="member-name">Shereya Verma</div>
+            <div class="member-role">Data Analysis and Insights</div>
+            <div class="member-tag">Finds the story in the data and turns predictions into business actions.</div>
+          </div>
+          <strong style="font-size: 0.8rem; color: #334155;">WHAT SHE DOES:</strong>
+          <ul class="member-tasks-list">
+            <li>Makes charts showing who leaves and why (EDA)</li>
+            <li>Explains findings (new customers, complaints, phone buyers)</li>
+            <li>Designs the 5 risk levels and their personalized retention offers</li>
+            <li>Creates the rule heuristics that write business insights automatically</li>
+          </ul>
+          <strong style="font-size: 0.8rem; color: #334155; margin-top: 0.5rem;">CORE TOOLS:</strong>
+          <div class="tools-row">
+            <span class="badge-tool">pandas</span>
+            <span class="badge-tool">Matplotlib</span>
+            <span class="badge-tool">Seaborn</span>
+          </div>
+        </div>
+
+        <!-- Rohan Singh Kholiya -->
+        <div class="member-card rohan">
+          <div class="member-header">
+            <div class="member-name">Rohan Singh Kholiya</div>
+            <div class="member-role">Design (UI)</div>
+            <div class="member-tag">Makes Churnio look like a real, professional enterprise product.</div>
+          </div>
+          <strong style="font-size: 0.8rem; color: #334155;">WHAT HE DOES:</strong>
+          <ul class="member-tasks-list">
+            <li>Designs the colours, typography, responsive cards and buttons</li>
+            <li>Builds the top navigation menu bar and Home page overview</li>
+            <li>Keeps the application readable on every laptop (light crisp theme)</li>
+            <li>Explains the look and ergonomic flow of the application during demo</li>
+          </ul>
+          <strong style="font-size: 0.8rem; color: #334155; margin-top: 0.5rem;">CORE TOOLS:</strong>
+          <div class="tools-row">
+            <span class="badge-tool">HTML</span>
+            <span class="badge-tool">CSS</span>
+            <span class="badge-tool">Streamlit layout</span>
+          </div>
+        </div>
+
+        <!-- Rahul Mehra -->
+        <div class="member-card rahul">
+          <div class="member-header">
+            <div class="member-name">Rahul Mehra</div>
+            <div class="member-role">App Logic and Testing</div>
+            <div class="member-tag">Makes the website actually work when someone uses it.</div>
+          </div>
+          <strong style="font-size: 0.8rem; color: #334155;">WHAT HE DOES:</strong>
+          <ul class="member-tasks-list">
+            <li>Connects the trained model pipeline to the frontend</li>
+            <li>Builds the interactive customer input form and CSV bulk uploader</li>
+            <li>Validates uploaded files and formats clear feedback messages</li>
+            <li>Displays real-time results, charts, and downloadable customer report</li>
+            <li>Executes the live demo smoothly during presentation</li>
+          </ul>
+          <strong style="font-size: 0.8rem; color: #334155; margin-top: 0.5rem;">CORE TOOLS:</strong>
+          <div class="tools-row">
+            <span class="badge-tool">Streamlit</span>
+            <span class="badge-tool">pandas</span>
+            <span class="badge-tool">pickle</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Viva Q&A Defense Cards (Page 8) -->
+      <div class="card">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem;">Viva Defense & Presentation Q&A ("Answers Everyone Must Know")</h3>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem;">Click on any question to view the exact answer recommended in the project guide:</p>
+        
+        <div id="qaAccordionList">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 1.5rem;">
+      <p><strong>Churnio &ndash; Retention Hub</strong> &bull; B.Tech 3rd Year, 5th Semester &bull; KCC Institute of Technology and Management</p>
+      <p style="margin-top: 4px; font-size: 0.75rem;">Team: Sadaf (Leader) &bull; Shereya Verma &bull; Rohan Singh Kholiya &bull; Rahul Mehra &bull; Guide: Dr. Ojaswani &bull; HOD: Dr. Chetan Khemraj</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
