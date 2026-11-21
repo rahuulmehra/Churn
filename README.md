@@ -6,19 +6,7 @@
 - **Guide**: Dr. Ojaswani &bull; **HOD**: Dr. Chetan Khemraj
 
 ---
-
-## 🚀 How to Run the Website for Presentation Tomorrow
-
-1. Simply double-click **`index.html`** in this folder to open it in Google Chrome, Microsoft Edge, or any modern web browser.
-2. Alternatively, run a lightweight local web server in PowerShell:
-   ```powershell
-   python -m http.server 8000
-   ```
-   Then open `http://localhost:8000` in your browser.
-
----
-
-## 🎯 Features Implemented (Matching 8-Page Guide 1:1)
+## 🎯 Features Implemented
 
 ### 1. Home Page
 - **Hero Banner**: "Every lost customer is a lost sale. Find them before they leave."
